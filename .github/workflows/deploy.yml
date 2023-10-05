@@ -1,0 +1,15 @@
+name: Deploy
+on: push
+jobs:
+    deploy:
+        runs-on: ubuntu-22.04
+        steps:
+            - name: Checkout code
+              uses: actions/checkout@v4
+            - name: lint
+              run: npm lint
+            - name: test
+              run: npm test
+            - name: build
+              run: npm build
+
