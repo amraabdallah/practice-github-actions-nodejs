@@ -2,9 +2,10 @@ name: output issue details
 on:
     issues:
       types: [opened]
+    workflow_dispatch: 
 jobs:
     info:
         runs-on: ubuntu-22.04
         steps:
             - name: display metadata
-              run: echo "${{ toJSON(github.event) }}"
+              run: echo ${{ toJSON(github.event) }}
