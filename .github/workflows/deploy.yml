@@ -3,7 +3,8 @@ on:
   pull_request:
     types:
       - opened
-      - edited
+    paths-ignore: 
+      - '.github/workflows/*'
   workflow_dispatch:
   push:
     branches:
